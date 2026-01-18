@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #ffe6f0, #fff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #ff4d88;
+    }
+
+    .quote {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .gif {
+      width: 250px;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background: #ff4d88;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #e6005c;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 20px;
+      background: #ffb3cc;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <h1>Hey My Love 💕</h1>
+    <p class="quote">"Every moment with you feels like my favorite song on repeat."</p>
+    <img class="gif" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="cute gif" />
+    <button onclick="scrollToSection('music')">Scroll Down ↓</button>
+  </section>
+
+  <!-- Section 2 -->
+    <!-- Section 2 -->
+  <section id="music">
+    <h2>A Song Just for You 🎶</h2>
+    <p class="quote">This song reminds me of you every single time 💖</p>
+
+    <!-- Spotify Single Song Embed -->
+        <iframe data-testid="embed-iframe"
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/6WlARP6h4CDVOcY386wW0W?utm_source=generator"
+      width="100%"
+      height="352"
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+    <img class="gif" src="https://media.giphy.com/media/l0HlOvJ7yaacpuSas/giphy.gif" alt="music gif" />
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <h2>Why You’re Special 💗</h2>
+    <p class="quote">"You are my today and all of my tomorrows."</p>
+    <p class="quote">"I fall for you a little more every single day."</p>
+    <img class="gif" src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="love gif" />
+  </section>
+
+  <!-- Section 4 -->
+  <section>
+    <h2>Forever Us 🥰</h2>
+    <p class="quote">"No matter where life takes us, my heart chooses you."</p>
+    <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="forever gif" />
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top ↑</button>
+  </section>
+
+  <footer>
+    Made with 💖 just for you
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function playSong(song) {
+      const player = document.getElementById('audioPlayer');
+      if (song) {
+        player.src = song;
+        player.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
